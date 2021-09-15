@@ -35,6 +35,15 @@ test('Should post a ticket', async () => {
   expect(ticket).not.toBeNull()
 })
 
+test('Should failed to update', async () => {
+  await request(app)
+    .patch(`/tickets/${ticketOneId}`)
+    .send({
+      name: 'Soy',
+    })
+    .expect(400)
+})
+
 test('Should update a ticket', async () => {
   await request(app)
     .patch(`/tickets/${ticketOneId}`)
