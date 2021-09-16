@@ -56,7 +56,7 @@ and provide the specific key in JSON body such as
 "status": "accepted"
 }
 
-Wheter the keys provided are not matched in ticket structure, there will occur an error.
+Wheter the keys provided are not matched in the ticket structure, there will occur an error.
 
 ### 6. Delete the ticket
 
