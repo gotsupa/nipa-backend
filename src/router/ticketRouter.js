@@ -4,7 +4,7 @@ import Ticket from '../models/ticket.js'
 const router = new express.Router()
 
 router.get('/', (req, res) => {
-  res.send('Hello')
+  res.send('Backend Server is running')
 })
 
 // Get all the tickets in the database, sorting, listing
