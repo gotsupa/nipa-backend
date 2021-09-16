@@ -1,14 +1,10 @@
 # SIMPLE SUPPORT TICKET MANAGEMENT
 
----
-
 RESTful API to provide a simple helpdesk support ticket management using NodeJS and NoSQL Database (MongoDB).
 
 ## Installation
 
----
-
-use npm package to install node modules and dependencies.
+Use npm package to install node modules and all dependencies.
 
 ```bash
 npm install
@@ -16,26 +12,20 @@ npm install
 
 ## ticket structure
 
----
-
-**title** => String
-**description** => String
-**contact_info** => String
-**status** => String (pedding, accepted, resolved, rejected)
-**createdAt** => Automatically created by MongoDB database
-**updatedAt** => Automatically created by MongoDB database
+- **title** => String
+- **description** => String
+- **contact_info** => String (probably be a mobile phone number)
+- **status** => String (pedding, accepted, resolved, rejected)
+- **createdAt** => Automatically created by MongoDB database
+- **updatedAt** => Automatically created by MongoDB database
 
 ## API function
 
----
+Use postman to fire api.
 
-use postman to fire api.
+### 1. Create new ticket
 
-### 1. create new ticket
-
----
-
-use POST Method and use url: localhost:3000/tickets
+Use POST Method and use _\'url: localhost:3000/tickets\'_
 and provide the JSON body.
 
 {
@@ -45,29 +35,21 @@ and provide the JSON body.
 "status": "pending"
 }
 
-### 2. get all tickets
+### 2. Get all tickets
 
----
+Use GET Method and use _\'url: localhost:3000/tickets\'_
 
-use GET Method and use url: localhost:3000/tickets
+### 3. Get the ticket by id
 
-### 3. get the ticket by id
+Use GET Method and use _\'url: localhost:3000/tickets:id\'_
 
----
+### 4. Get and filter/sort tickets
 
-use GET Method and use url: localhost:3000/tickets:id
+Use GET Method and use _\'url: localhost:3000/tickets?sortBy=updatedAt:desc (for filtered by stats url: localhost:3000/tickets?filterBy=status:pending)\'_
 
-### 4. get and filter/sort tickets
+### 5. Update the ticket
 
----
-
-use GET Method and use url: localhost:3000/tickets?sortBy=updatedAt:desc (for filtered by stats url: localhost:3000/tickets?filterBy=status:pending)
-
-### 5. update the ticket
-
----
-
-use PATCH Method and use url: localhost:3000/tickets:id
+Use PATCH Method and use _\'url: localhost:3000/tickets:id\'_
 and provide the specific key in JSON body such as
 
 {
@@ -76,8 +58,6 @@ and provide the specific key in JSON body such as
 
 Wheter the keys provided are not matched in ticket structure, there will occur an error.
 
-### 6. delete the ticket
-
----
+### 6. Delete the ticket
 
 Once the ticket have been created. It could not be deleted. If you try to delete the ticket, there will occure an error.
