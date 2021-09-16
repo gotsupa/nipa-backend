@@ -45,7 +45,7 @@ Use GET Method and use _\'url: localhost:3000/tickets:id\'_
 
 ### 4. Get and filter/sort tickets
 
-Use GET Method and use _\'url: localhost:3000/tickets?sortBy=updatedAt:desc (for filtered by stats url: localhost:3000/tickets?filterBy=status:pending)\'_
+Use GET Method and use _\'url: localhost:3000/tickets?sortBy=updatedAt:desc (for filtered by status url: localhost:3000/tickets?filterBy=status:pending)\'_
 
 ### 5. Update the ticket
 
@@ -60,4 +60,4 @@ Wheter the keys provided are not matched in ticket structure, there will occur a
 
 ### 6. Delete the ticket
 
-Once the ticket have been created. It could not be deleted. If you try to delete the ticket, there will occure an error.
+Once the ticket have been created. It could not be deleted. If you try to delete the ticket, there will occur an error.
