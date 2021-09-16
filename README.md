@@ -10,6 +10,20 @@ Use npm package to install node modules and all dependencies.
 npm install
 ```
 
+## Running the program
+
+Running
+
+```bash
+npm run dev
+```
+
+Testing
+
+```bash
+npm run test
+```
+
 ## ticket structure
 
 - **title** => String
